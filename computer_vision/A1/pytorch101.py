@@ -24,7 +24,9 @@ def create_sample_tensor():
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  x = torch.tensor([[0, 10],
+                   [100, 0],
+                   [0, 0]])
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
@@ -58,7 +60,8 @@ def mutate_tensor(x, indices, values):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  for i in range(len(indices)):
+        x[indices[i]] = values[i]
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
@@ -87,7 +90,13 @@ def count_tensor_elements(x):
   #   You CANNOT use the built-in functions torch.numel(x) or x.numel().      #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  rank = x.dim()
+  shapes = x.shape
+  if rank == 1:
+      num_elements = shapes[0] * rank
+  else:
+      num_elements = shapes[0] * shapes[1]
+    
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
