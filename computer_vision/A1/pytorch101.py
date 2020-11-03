@@ -143,7 +143,13 @@ def multiples_of_ten(start, stop):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  x = []
+  for i in range(start, stop + 1):
+      if i%10 == 0:
+          x.append(i)
+      if len(x) == 0:
+        x=[]
+  x = torch.tensor(x, dtype=torch.float64)
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
