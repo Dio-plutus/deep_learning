@@ -118,7 +118,7 @@ def create_tensor_of_pi(M, N):
   #       TODO: Implement this function. It should take one line.             #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  x = torch.full((M,N), 3.14)
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
