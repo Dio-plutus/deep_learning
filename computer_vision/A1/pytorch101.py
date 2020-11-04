@@ -260,7 +260,8 @@ def shuffle_cols(x):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  idx = torch.tensor([0, 0, 2, 1])
+  y = x[:, idx]
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
@@ -286,7 +287,11 @@ def reverse_rows(x):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  idx = torch.arange(x.shape[0])
+  idx = torch.tensor([3, 2, 1, 0])
+  #idx = idx.index_select(0, idx)
+  
+  y = x[idx]
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
@@ -313,7 +318,10 @@ def take_one_elem_per_col(x):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  idx0 = torch.tensor([1, 0, 3])
+  idx1 = torch.tensor([0, 1, 2])
+    
+  y = x[idx0, idx1]
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
