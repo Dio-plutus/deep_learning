@@ -406,7 +406,9 @@ def reshape_practice(x):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  y = x.reshape(3, 2, 4)
+  #y = y.transpose(1, 2)#.contiguous()
+  y = y.reshape(3, 1, 8)
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
@@ -444,7 +446,12 @@ def zero_row_min(x):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  y = x.clone()
+
+  arg_min_idx = torch.argmin(x, dim=1)
+  
+  for i, idx in enumerate(arg_min_idx):
+        y[i, idx] = 0
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
