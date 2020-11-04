@@ -347,7 +347,8 @@ def count_negative_entries(x):
   #                    TODO: Implement this function                          #
   #############################################################################
   # Replace "pass" statement with your code
-  pass
+  mask = (x < 0)
+  num_neg = len(list(x[mask]))
   #############################################################################
   #                            END OF YOUR CODE                               #
   #############################################################################
